@@ -80,12 +80,65 @@ input {
   font-size: 13px;
   font-weight: 500;
   font-style: normal;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #d0aa8c;
+  color: #ffffff;
+  border-color: #d0aa8c;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .btn--pink {
   background-color: #d0aa8c;
   border-color: #d0aa8c;
   color: #ffffff;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btn--pink:hover {
+  background-color: transparent;
+  color: #2f2c34;
+  border-color: #2f2c34;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.phone a {
+  margin-bottom: 5px;
+  color: #2f2c34;
+  font-size: 17px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
+.phone span {
+  color: #d0aa8c;
+  font-size: 10px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.63px;
+  text-transform: uppercase;
 }
 
 .breadcrumbs {
@@ -161,35 +214,6 @@ input {
           align-items: center;
 }
 
-.top-menu__phone {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.top-menu__phone a {
-  margin-bottom: 5px;
-  color: #2f2c34;
-  font-size: 17px;
-  font-weight: 500;
-  font-style: normal;
-  letter-spacing: normal;
-  text-transform: uppercase;
-}
-
-.top-menu__phone span {
-  color: #d0aa8c;
-  font-size: 10px;
-  font-weight: 500;
-  font-style: normal;
-  letter-spacing: 0.63px;
-  text-transform: uppercase;
-}
-
 .top-menu__logo {
   margin-top: -15px;
 }
@@ -205,7 +229,10 @@ input {
 }
 
 .header__bottom {
-  background-color: #2f2c34;
+  background: #2f2c34;
+  background: -webkit-gradient(linear, left top, right top, from(#2f2c34), color-stop(35%, #463d40));
+  background: -o-linear-gradient(left, #2f2c34 0%, #463d40 35%);
+  background: linear-gradient(90deg, #2f2c34 0%, #463d40 35%);
   font-family: "Romul", serif;
   color: #ffffff;
   text-transform: uppercase;
@@ -242,6 +269,7 @@ input {
   background-image: url("../images/bg.png"); }
 
 .content {
+  padding-bottom: 51px;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -396,4 +424,198 @@ input {
   margin-top: 20px;
 }
 
+.no-webp .footer {
+  background-image: url("../images/footer_bg.png"); }
+
+.footer {
+  padding: 39px 0 20px;
+  color: #ffffff;
+  position: relative;
+  background-position: center top 65%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1;
+}
+
+.footer .wrapper {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__col {
+  position: relative;
+  width: 20%;
+}
+
+.footer__col:not(:last-child)::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 50%;
+  bottom: 20%;
+  right: 0;
+  background-color: #ffffff;
+}
+
+.footer__title {
+  position: relative;
+  margin-bottom: 54px;
+  font-family: Romul;
+  font-size: 19px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.footer__title::after {
+  content: "";
+  position: absolute;
+  bottom: -19px;
+  left: 0;
+  width: 68px;
+  height: 2px;
+  background-color: #d0aa8c;
+}
+
+.footer-nav {
+  margin-bottom: 49px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer-nav__item {
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: left;
+  opacity: 0.4;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.footer-nav__item:hover {
+  opacity: 1;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.footer-nav__item + .footer-nav__item {
+  margin-top: 9px;
+}
+
+.footer__links {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 17px;
+  z-index: 3;
+  margin-bottom: 17px;
+}
+
+.footer__link {
+  display: block;
+  padding: 8px 19px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ffffff;
+  opacity: 0.4;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__link:hover {
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__contacts {
+  position: relative;
+  padding: 15px;
+}
+
+.footer__contacts::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  -webkit-filter: opacity(0.15);
+          filter: opacity(0.15);
+}
+
+.footer__phone {
+  text-align: right;
+}
+
+.footer__phone a {
+  color: #ffffff;
+  margin-bottom: 3px;
+}
+
+.footer__phone span {
+  color: #9a9a9a;
+}
+
+.footer__phone + .footer__phone {
+  margin-top: 10px;
+}
+
+.footer__copy {
+  position: relative;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: left;
+  z-index: 2;
+  opacity: 0.4;
+}
+
 .webp .content { background-image: url(../images/bg.webp); }
+
+.webp .footer { background-image: url(../images/footer_bg.webp); }

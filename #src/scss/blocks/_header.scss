@@ -32,30 +32,7 @@
     justify-content: space-between;
     align-items: center;
 
-    &__phone {
-        display: flex;
-        flex-direction: column;
 
-        a {
-            margin-bottom: 5px;
-            color: #2f2c34;
-            font-size: 17px;
-            font-weight: 500;
-            font-style: normal;
-            letter-spacing: normal;
-            text-transform: uppercase;
-        }
-
-
-        span {
-            color: #d0aa8c;
-            font-size: 10px;
-            font-weight: 500;
-            font-style: normal;
-            letter-spacing: 0.63px;
-            text-transform: uppercase;
-        }
-    }
 
     &__logo {
         margin-top: -15px;
@@ -75,7 +52,8 @@
 }
 
 .header__bottom {
-    background-color: #2f2c34;
+    background: rgb(47, 44, 52);
+    background: linear-gradient(90deg, rgba(47, 44, 52, 1) 0%, rgba(70, 61, 64, 1) 35%);
     font-family: "Romul", serif;
     color: #ffffff;
     text-transform: uppercase;
@@ -106,4 +84,3 @@
         }
     }
 }
-

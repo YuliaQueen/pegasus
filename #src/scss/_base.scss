@@ -9,12 +9,53 @@
     font-size: 13px;
     font-weight: 500;
     font-style: normal;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: #d0aa8c;
+        color: #ffffff;
+        border-color: #d0aa8c;
+        transition: 0.3s;
+    }
 }
 
 .btn--pink {
     background-color: #d0aa8c;
     border-color: #d0aa8c;
     color: #ffffff;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: transparent;
+        color: #2f2c34;
+        border-color: #2f2c34;
+        transition: 0.3s;
+    }
+}
+
+.phone {
+    display: flex;
+    flex-direction: column;
+
+    a {
+        margin-bottom: 5px;
+        color: #2f2c34;
+        font-size: 17px;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: normal;
+        text-transform: uppercase;
+    }
+
+
+    span {
+        color: #d0aa8c;
+        font-size: 10px;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: 0.63px;
+        text-transform: uppercase;
+    }
 }
 
 .breadcrumbs {
