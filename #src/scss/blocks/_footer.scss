@@ -195,6 +195,12 @@
 
     }
 
+    &__social-links {
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 12px;
+    }
+
     &__copy {
         position: relative;
         margin-top: 10px;

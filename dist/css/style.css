@@ -256,6 +256,18 @@ input {
           transform: translateX(0);
 }
 
+.social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social-links__item {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
 .header__top {
   position: relative;
   padding-top: 35px;
@@ -748,6 +760,15 @@ input {
 
 .footer__phone + .footer__phone {
   margin-top: 10px;
+}
+
+.footer__social-links {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 12px;
 }
 
 .footer__copy {

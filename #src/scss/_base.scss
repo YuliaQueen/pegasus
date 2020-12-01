@@ -166,3 +166,13 @@
 .mobile__menu.active {
     transform: translateX(0);
 }
+
+.social-links {
+    display: flex;
+
+    &__item {
+        display: block;
+        width: 28px;
+        height: 28px;
+    }
+}
