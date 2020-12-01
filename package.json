@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "gulp-svg-sprite": "^1.5.0",
-    "gulp-webpcss": "^1.1.1"
+    "gulp-webpcss": "^1.1.1",
+    "uglify-es": "^3.3.9"
   }
 }
