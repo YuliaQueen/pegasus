@@ -120,7 +120,7 @@
     bottom: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #d0aa8c;
+    background-color: rgba($color: #d0aa8c, $alpha: 0.8);
     z-index: 10;
     transition: all .4s ease-in-out;
     transform: translateX(-100%);

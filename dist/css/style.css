@@ -206,7 +206,7 @@ input {
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #d0aa8c;
+  background-color: rgba(208, 170, 140, 0.8);
   z-index: 10;
   -webkit-transition: all .4s ease-in-out;
   -o-transition: all .4s ease-in-out;
