@@ -1,0 +1,132 @@
+.content {
+    background-image: url('../images/bg.png');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 733px;
+        margin: 0 auto;
+        padding-bottom: 52px;
+    }
+
+    &__subtitle {
+        color: #2f2c34;
+        font-size: 17px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+    }
+
+    &__title {
+        position: relative;
+        color: #2f2c34;
+        font-family: "Romul", serif;
+        font-size: 38px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 32px;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 80px;
+            height: 2px;
+            background-color: #d0aa8c;
+        }
+
+        &::before {
+            left: -40%;
+        }
+
+        &::after {
+            right: -40%;
+        }
+    }
+
+    &__text {
+        color: #343434;
+        font-size: 13px;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 16.67px;
+        text-align: center;
+
+        p + p  {
+            margin-top: 10px;
+        }
+    }
+
+    &__articles {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 43px;
+    }
+
+    .article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 555px;
+
+        &__img {
+            width: 100%;
+            max-height: 235px;
+            margin-bottom: 25px;
+        }
+
+        &__title {
+            position: relative;
+            padding-bottom: 25px;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 90px;
+                height: 1px;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0;
+                background-color: #d0aa8c;
+            }
+
+            a {
+                color: #2f2c34;
+                font-family: "Romul", serif;
+                font-size: 25px;
+                font-weight: 400;
+                font-style: normal;
+                letter-spacing: normal;
+                line-height: 16.67px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+
+        &__descr {
+            padding-top: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+
+            p+p {
+                margin-top: 20px;
+            }
+        }
+    }
+}

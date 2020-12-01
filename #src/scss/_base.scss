@@ -1,0 +1,49 @@
+.btn {
+    padding: 6px 36px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid #2f2c34;
+    letter-spacing: normal;
+    color: #2f2c34;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.btn--pink {
+    background-color: #d0aa8c;
+    border-color: #d0aa8c;
+    color: #ffffff;
+}
+
+.breadcrumbs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 13px 0 10px 0;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid #2f2c341e;
+
+    &__item {
+        color: #332f36;
+        margin-left: 12px;
+
+        &.active {
+            color: #d0aa8c;
+        }
+
+        &:not(:last-child) {
+            padding-right: 10px;
+            border-right: 1px solid #d0aa8c;
+            ;
+        }
+    }
+}
