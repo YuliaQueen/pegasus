@@ -67,6 +67,45 @@
         }
     }
 
+    &__hamburger {
+        z-index: 20;
+        display: inline-block;
+        cursor: pointer;
+
+        @media (min-width: 768px) {}
+
+        @media (min-width: 1200px) {
+            display: none;
+        }
+
+        .line1,
+        .line2,
+        .line3 {
+            width: 35px;
+            height: 5px;
+            background-color: #d0aa8c;
+            margin: 6px 0;
+            transition: .4s;
+        }
+    }
+
+    &__hamburger.cross {
+        .line1 {
+            transform: rotate(-45deg) translate(-9px, 6px);
+            background-color: #ad7d58;
+        }
+
+        .line2 {
+            opacity: 0;
+            background-color: transparent;
+        }
+
+        .line3 {
+            transform: rotate(45deg) translate(-9px, -6px);
+            background-color: #ad7d58;
+        }
+    }
+
 }
 
 

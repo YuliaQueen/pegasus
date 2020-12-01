@@ -15,3 +15,40 @@ testWebP(function (support) {
         document.querySelector('body').classList.add('no-webp');
     }
 });
+
+//MOBILE MENU
+var button = document.querySelector('.top-menu__hamburger');
+var menu = document.querySelector('.mobile__menu');
+var body = document.querySelector('body');
+var overlay = document.querySelector('.overlay_menu');
+var links = document.querySelectorAll('.mobile__menu-link');
+
+button.addEventListener('click', function () {
+    button.classList.toggle('cross');
+    menu.classList.toggle('active');
+    body.classList.toggle('noscroll');
+    overlay.classList.toggle('visible');
+});
+
+links.forEach(function (link) {
+    link.addEventListener('click', function () {
+        menu.classList.toggle('active');
+        button.classList.toggle('cross');
+        body.classList.toggle('noscroll');
+        overlay.classList.toggle('visible');
+    });
+});
+
+overlay.addEventListener('click', function () {
+    this.classList.remove('visible');
+    menu.classList.remove('active');
+    body.classList.remove('noscroll');
+    button.classList.remove('cross');
+});
+
+window.addEventListener('resize', function () {
+    menu.classList.remove('active');
+    body.classList.remove('noscroll');
+    button.classList.remove('cross');
+    overlay.classList.remove('visible');
+});
