@@ -40,14 +40,20 @@
         text-transform: uppercase;
         margin-bottom: 32px;
 
+
         &::before,
         &::after {
+            display: none;
             content: "";
             position: absolute;
             top: 50%;
             width: 80px;
             height: 2px;
             background-color: #d0aa8c;
+
+            @media (min-width: 768px) {
+                display: block;
+            }
         }
 
         &::before {
@@ -68,16 +74,22 @@
         line-height: 16.67px;
         text-align: center;
 
-        p + p  {
+        p+p {
             margin-top: 10px;
         }
     }
 
     &__articles {
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
+        justify-content: center;
         row-gap: 43px;
+        column-gap: 10px;
+
+        @media (min-width: 1200px) {
+            justify-content: space-between;
+            column-gap: auto;
+        }
     }
 
     .article {

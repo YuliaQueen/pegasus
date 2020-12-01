@@ -5,11 +5,16 @@
 
     &::before,
     &::after {
+        display: none;
         content: "";
         position: absolute;
         top: 26px;
         width: 548px;
         background-color: #2f2c34;
+
+        @media (min-width: 1200px) {
+            display: block;
+        }
     }
 
 
@@ -29,8 +34,20 @@
 
 .top-menu {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-around;
+
+    @media (min-width: 1200px) {
+        justify-content: space-between;
+    }
+
+    &__phone {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: flex;
+        }
+    }
 
 
 
@@ -39,8 +56,14 @@
     }
 
     &__btns {
+        display: none;
+
         button+button {
             margin-left: 25px;
+        }
+
+        @media (min-width: 1200px) {
+            display: block;
         }
     }
 
@@ -52,12 +75,17 @@
 }
 
 .header__bottom {
+    display: none;
     background: rgb(47, 44, 52);
     background: linear-gradient(90deg, rgba(47, 44, 52, 1) 0%, rgba(70, 61, 64, 1) 35%);
     font-family: "Romul", serif;
     color: #ffffff;
     text-transform: uppercase;
     padding: 23px 0;
+
+    @media (min-width: 1200px) {
+        display: block;
+    }
 
 
     .bottom-nav {

@@ -7,6 +7,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+
     &::before {
         content: "";
         position: absolute;
@@ -22,25 +23,60 @@
         position: relative;
         z-index: 2;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 
     &__col {
         position: relative;
-        width: 20%;
+        padding-left: 15px;
+        padding-right: 15px;
 
-        &:not(:last-child) {
-            &::before {
-                position: absolute;
-                content: "";
-                width: 1px;
-                height: 50%;
-                bottom: 20%;
-                right: 0;
-                background-color: #ffffff;
+        @media (min-width: 768px) {
+            width: 45%;
+            flex-wrap: wrap;
+            padding-left: auto;
+            padding-right: auto;
+        }
+
+        @media (min-width: 1200px) {
+            width: 20%;
+            padding-left: auto;
+        }
+
+        &::before {
+            display: none;
+            position: absolute;
+            content: "";
+            width: 1px;
+            background-color: rgba($color:#fff, $alpha: 0.4);
+            bottom: 15%;
+            @media (min-width: 1200px) {
+                display: block;
             }
         }
-        
+
+        &:first-child,
+        &:nth-child(2) {
+            &::before {
+                height: 50%;
+                right: 0;
+            }
+        }
+
+        &:nth-child(3) {
+            &::before {
+                height: 80%;
+                right: 0;
+            }
+        }
+
     }
 
     &__title {
@@ -128,6 +164,7 @@
         position: relative;
         padding: 15px;
 
+
         &::after {
             content: "";
             position: absolute;
@@ -160,14 +197,20 @@
 
     &__copy {
         position: relative;
+        margin-top: 10px;
         color: #ffffff;
         font-family: Montserrat;
         font-size: 15px;
         font-style: normal;
         letter-spacing: normal;
         line-height: normal;
-        text-align: left;
+        text-align: center;
         z-index: 2;
         opacity: 0.4;
+
+        @media (min-width: 1200px) {
+            text-align: left;
+            margin-top: auto;
+        }
     }
 }

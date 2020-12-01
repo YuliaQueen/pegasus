@@ -183,6 +183,7 @@ input {
 
 .header__top::before,
 .header__top::after {
+  display: none;
   content: "";
   position: absolute;
   top: 26px;
@@ -206,16 +207,23 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.top-menu__phone {
+  display: none;
 }
 
 .top-menu__logo {
   margin-top: -15px;
+}
+
+.top-menu__btns {
+  display: none;
 }
 
 .top-menu__btns button + button {
@@ -229,6 +237,7 @@ input {
 }
 
 .header__bottom {
+  display: none;
   background: #2f2c34;
   background: -webkit-gradient(linear, left top, right top, from(#2f2c34), color-stop(35%, #463d40));
   background: -o-linear-gradient(left, #2f2c34 0%, #463d40 35%);
@@ -322,6 +331,7 @@ input {
 
 .content__title::before,
 .content__title::after {
+  display: none;
   content: "";
   position: absolute;
   top: 50%;
@@ -356,12 +366,15 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   row-gap: 43px;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
 }
 
 .content .article {
@@ -453,24 +466,40 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .footer__col {
   position: relative;
-  width: 20%;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.footer__col:not(:last-child)::before {
+.footer__col::before {
+  display: none;
   position: absolute;
   content: "";
   width: 1px;
+  background-color: rgba(255, 255, 255, 0.4);
+  bottom: 15%;
+}
+
+.footer__col:first-child::before,
+.footer__col:nth-child(2)::before {
   height: 50%;
-  bottom: 20%;
   right: 0;
-  background-color: #ffffff;
+}
+
+.footer__col:nth-child(3)::before {
+  height: 80%;
+  right: 0;
 }
 
 .footer__title {
@@ -605,15 +634,91 @@ input {
 
 .footer__copy {
   position: relative;
+  margin-top: 10px;
   color: #ffffff;
   font-family: Montserrat;
   font-size: 15px;
   font-style: normal;
   letter-spacing: normal;
   line-height: normal;
-  text-align: left;
+  text-align: center;
   z-index: 2;
   opacity: 0.4;
+}
+
+@media (min-width: 768px) {
+  .top-menu__phone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .content__title::before,
+  .content__title::after {
+    display: block;
+  }
+
+  .footer .wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .footer__col {
+    width: 45%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-left: auto;
+    padding-right: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__top::before,
+  .header__top::after {
+    display: block;
+  }
+
+  .top-menu {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .top-menu__btns {
+    display: block;
+  }
+
+  .header__bottom {
+    display: block;
+  }
+
+  .content__articles {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-column-gap: auto;
+       -moz-column-gap: auto;
+            column-gap: auto;
+  }
+
+  .footer__col {
+    width: 20%;
+    padding-left: auto;
+  }
+
+  .footer__col::before {
+    display: block;
+  }
+
+  .footer__copy {
+    text-align: left;
+    margin-top: auto;
+  }
 }
 
 .webp .content { background-image: url(../images/bg.webp); }
