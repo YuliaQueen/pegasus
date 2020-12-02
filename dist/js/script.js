@@ -18,10 +18,10 @@ testWebP(function (support) {
 
 //MOBILE MENU
 var button = document.querySelector('.top-menu__hamburger');
-var menu = document.querySelector('.mobile__menu');
+var menu = document.querySelector('.mobile-menu');
 var body = document.querySelector('body');
 var overlay = document.querySelector('.overlay_menu');
-var links = document.querySelectorAll('.mobile__menu-link');
+var links = document.querySelectorAll('.mobile-menu__link');
 
 button.addEventListener('click', function () {
     button.classList.toggle('cross');
