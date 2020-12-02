@@ -57,6 +57,7 @@
             width: 1px;
             background-color: rgba($color:#fff, $alpha: 0.4);
             bottom: 15%;
+
             @media (min-width: 1200px) {
                 display: block;
             }
@@ -196,6 +197,8 @@
     }
 
     &__social-links {
+        position: relative;
+        z-index: 3;
         align-items: center;
         justify-content: space-around;
         margin-top: 12px;

@@ -174,5 +174,16 @@
         display: block;
         width: 28px;
         height: 28px;
+        cursor: pointer;
+
+        svg {
+            fill: rgba($color: #ffffff, $alpha: 0.4);
+            transition: .3s;
+        }
+
+        svg:hover {
+            fill: #d0aa8c;
+            transition: .3s;
+        }
     }
 }

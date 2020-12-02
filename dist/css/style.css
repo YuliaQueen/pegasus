@@ -266,6 +266,21 @@ input {
   display: block;
   width: 28px;
   height: 28px;
+  cursor: pointer;
+}
+
+.social-links__item svg {
+  fill: rgba(255, 255, 255, 0.4);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.social-links__item svg:hover {
+  fill: #d0aa8c;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 .header__top {
@@ -763,6 +778,8 @@ input {
 }
 
 .footer__social-links {
+  position: relative;
+  z-index: 3;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
